@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="alert-box">
+
+    </div>
+
+    <form action="/auth/register" method="POST" class="form">
+        <label for="name">Name :</label>
+        <input type="text" name="name" class="name-txt" id="name-txt"/><br>
+        <label for="email">Email :</label>
+        <input type="email" name="email" class="email-txt" id="email-txt"/><br>
+        <label for="password">Password :</label>
+        <input type="password" name="password" class="pass-txt" id="pass-txt"/><br>
+        <label for="confirm-password">Confirm Password :</label>
+        <input type="password" name="confirm" class="cnfrm-pass-txt" id="cnfrm-pass-txt"/><br>
+        <label for="user-type">User Type :</label>
+        <select name="usr_typ" class="usr-typ" id="usr-typ" aria-placeholder="--select user type--">
+            <option value=""></option>
+            <option value="student">Student</option>
+            <option value="admin">Admin</option>
+            <option value="teacher">Teacher</option>
+            <option value="company">Company</option>
+        </select><br>
+        <label for="phone-no">Phone No</label>
+        <input type="number" name="phnno" class="phn-no-txt" id="phn-no"/><br>
+        <button type="submit">Register</button>
+    </form>
+
+    <div class="message" id="message">
+        {{#if message}}
+            <h4 >{{message}}</h4>
+        {{/if}}
+    </div>
+    
+</body>
+
+</html>
